@@ -1,0 +1,22 @@
+{
+    "name": "ziqiango/basics",
+    "description": "php basics",
+    "authors": [
+        {
+            "name": "zhuzq",
+            "email": "1228676735@qq.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^7.5"
+    },
+    "autoload": {
+        "psr-4": {"app\\": "src/app"}
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    }
+}
