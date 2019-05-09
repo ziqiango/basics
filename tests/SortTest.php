@@ -18,8 +18,10 @@ class SortTest extends TestCase
     public function testEmpty()
     {
         $sort = new Sort();
-        $arr = [];
-        $this->assertEmpty($sort->bubble($arr));
+        $arr = [3, 6, 2, 8, 4, 7, 5, 1];
+        $res = $sort->bubble($arr);
+        var_dump($res);
+        $this->assertEmpty($res);
     }
 
 
