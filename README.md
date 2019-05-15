@@ -14,4 +14,7 @@
 ### 2. 重要文件
 
 ├─BubblleSort.php 冒泡排序
+
 ├─QuickSort.php  快速排序
+
+├─InsertionSort.php  插入排序
