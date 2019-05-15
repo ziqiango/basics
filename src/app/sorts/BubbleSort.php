@@ -6,17 +6,16 @@
  * Time: 11:07
  */
 
-namespace app;
+namespace app\sorts;
 
-class Sort
+class BubbleSort extends BaseSort
 {
-
     /**
-     * 冒泡排序 升序
+     * 排序
      * @param array $arr
      * @return array
      */
-    public function bubble($arr)
+    public function sort($arr)
     {
         /**
          * 1. 比较相邻的元素。如果第一个比第二个大，就交换他们两个。
@@ -38,5 +37,4 @@ class Sort
         }
         return $arr;
     }
-
 }

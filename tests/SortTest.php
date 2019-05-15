@@ -9,21 +9,34 @@
 namespace Tests;
 
 
-use app\Sort;
+use app\sorts\BubbleSort;
+use app\sorts\QuickSort;
 use PHPUnit\Framework\TestCase;
 
 class SortTest extends TestCase
 {
 
-    public function testEmpty()
+    private $testArr = [3, 6, 2, 8, 4, 7, 5, 1];
+
+    private function getSortTestArr()
     {
-        $sort = new Sort();
-        $arr = [3, 6, 2, 8, 4, 7, 5, 1];
-        $res = $sort->bubble($arr);
-        var_dump($res);
-        $this->assertEmpty($res);
+        \sort($this->testArr);
+        return $this->testArr;
     }
 
+    public function testBubbleSort()
+    {
+        $sort = new BubbleSort();
+        $res = $sort->sort($this->testArr);
+        $this->assertEquals($res, $this->getSortTestArr());
+    }
+
+    public function testQuickSort()
+    {
+        $sort = new QuickSort();
+        $res = $sort->sort($this->testArr);
+        $this->assertEquals($res, $this->getSortTestArr());
+    }
 
 
 }
